@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+/* base.css
+--------------------------------------------------------------
+
+:: CSS Index
+
+ 1 : Global Reset
+ 2 : body
+   : link
+ 3 : general
+ 4 : usual classes
+
+ 
+--------------------------------------------------------------
+
+2010.08.04 : designed by Sig.
+
+-------------------------------------------------------------- */
+
+@import "reset.css";
+@import "layout.css";
+
+
+/* contents
+-------------------------------------------------------------- */
+
+@media screen and (max-width: 600px),
+       screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (-webkit-min-device-pixel-ratio: 1.5){
+    
+    body {
+        width: 320px;
+        max-width: 320px;
+    }
+    #wrapper {
+        width: 300px;
+    }
+    header {
+    }
+    header h1 {
+        padding-left: 10px;
+        color: #333;
+        font-size: 42px;
+/*
+        text-shadow: 1px 1px 0px #333,
+                     2px 2px 0px #fff,
+                     3px 3px 0px #333,
+                     4px 4px 0px #fff,
+                     5px 5px 0px #333,
+                     6px 6px 0px #fff,
+                     7px 7px 0px #333,
+                     8px 8px 0px #333,
+                     2px -2px 0px #eee,
+                     3px -3px 0px #fff,
+                     4px -4px 0px #eee,
+                     5px -5px 0px #fff,
+                     6px -6px 0px #eee,
+                     7px -7px 0px #fff,
+                     8px -8px 0px #eee
+                    ;
+*/
+    }
+    header h1:after {
+        padding-left: 10px;
+    }
+    article h1, section h1 {
+        font-family: "Big Caslon","Cochin","Times New Roman","Georgia", serif;
+        font-size: 24px;
+        margin-top: 0.875em;
+        margin-bottom: 0;
+        
+    }
+    article h2, section h2 {
+        font-family: "Big Caslon","Cochin","Times New Roman","Georgia", serif;
+        font-size: 21px;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+    #contents {
+        padding: 10px;
+    }
+    section,article {
+        float: none;
+        width: auto;
+        margin-left: 0;
+    }
+    ol.column4 {
+        float: none;
+        width: auto;
+    }
+    #contents blockquote,
+    #contents aside {
+        padding: 0.875em 1.167em;
+    }
+    #contents dl.dateList dt {
+    }
+    time {
+        font-size: 12px;
+    }
+}
+
+
+
+

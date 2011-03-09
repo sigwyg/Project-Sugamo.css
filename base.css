@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+/* base.css
+--------------------------------------------------------------
+
+:: CSS Index
+
+ 1 : Global Reset
+ 2 : body
+   : link
+ 3 : general
+ 4 : usual classes
+
+ 
+--------------------------------------------------------------
+
+2010.08.04 : designed by Sig.
+
+-------------------------------------------------------------- */
+
+@import "reset.css";
+@import "layout.css";
+
+
+/* contents
+-------------------------------------------------------------- */
+
+
+@media screen and (max-width: 800px),
+       screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (-webkit-min-device-pixel-ratio: 1.5){
+
+    #wrapper {
+        width: 320px;
+    }
+    header nav {
+        position: relative;
+        right: 0;
+        top: 0;
+        margin: 1em 0 0;
+    }
+    header nav ul {
+        margin: 0;
+    }
+    header nav li {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        border-left: 1px dotted #ccc;
+        list-style-type: none;
+        text-align: center;
+    }
+    header nav a {
+        position: relative;
+        display: inline-block;
+        width: auto;
+        height: auto;
+        padding: 0.5em 1em;
+        line-height: 1.5;
+    }
+    header nav a:hover:after {
+        bottom: -5px;
+        left: 15px;
+    }
+    
+    #column-wrapper {
+        position: relative;
+        left: 0px;
+        width: 320px;
+        margin-bottom: 3em;
+        background: #111;
+        color: #eee;
+        margin-top: 0;
+    }
+    #contents {
+        position: relative;
+        top: 0px;
+        margin-left: 0px;
+        width: 320px;
+        padding-bottom: 20px;
+        margin-top: 0;
+        
+        background: #111;
+        color: #eee;
+    }
+    #right-column {
+        float: none;
+        width: 320px;
+        margin-top: 0;
+    }
+    #right-column nav:first-child h1 {
+        margin-top: 0px;
+        padding-top: 20px;
+    }
+    #left-column {
+        float: none;
+        width: 320px;
+        padding-bottom: 20px;
+    }
+    #center-column {
+        width: 320px;
+        float: none;
+        background-color: #fff;
+        color: #333;
+    
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+    #center-column article:target {
+        width: 280px;
+    }
+    #member ol {
+        float: left;
+        width: 104px;
+        margin-left: 2.5em;
+    }
+    footer {
+        text-align: center;
+    }
+        
+}
+
+
+
+

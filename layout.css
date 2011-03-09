@@ -28,7 +28,7 @@ body {
     background: #f0f0f0 url(./img/sandy-light.png) repeat;
     text-align: center;
     
-    font-family: Meiryo, "ＭＳ Ｐゴシック", "Hiragino Kaku Gothic Pro", sans-serif;
+    font-family: "Hiragino Kaku Gothic Pro", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
     line-height: 1.2;
     font-size: 12px;
 }
@@ -137,7 +137,7 @@ header {
     text-align: left;
 }
 header h1 {
-    font-family: "Apple Chancery", serif;
+    font-family: "Apple Chancery","Segoe Print", "Comic Sans MS", serif;
     text-shadow: -1px -1px 0px #fff;
     font-size: 36px;
 }
@@ -256,7 +256,7 @@ footer {
 
 
 article h1, section h1 { 
-    font-family: "Big Caslon","Cochin","Times New Roman","Georgia", serif;
+    font-family: "Big Caslon","Cochin","ＭＳ Ｐ明朝","Georgia", serif;
     font-size: 24px;
     line-height: 1.4;
     margin-top: 2em;
@@ -264,7 +264,7 @@ article h1, section h1 {
 }
 article h2, section h2,
 article section h1 {
-    font-family: "Big Caslon","Cochin","Times New Roman","Georgia", serif;
+    font-family: "Big Caslon","Cochin","ＭＳ Ｐ明朝","Georgia", serif;
     font-size: 21px;
     line-height: 1.6;
     margin-top: 2em;

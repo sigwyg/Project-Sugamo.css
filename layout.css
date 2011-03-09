@@ -181,7 +181,7 @@ header nav a {
     width: 90px;
     height: 45px;
     line-height: 45px;
-    background: rgba(50,50,50,1.0);
+    background: #111;
 }
 #nav1 a {
     -webkit-border-top-left-radius: 10px;
@@ -203,6 +203,7 @@ header nav a {
 }
 header nav a:hover {
     color: #f30;
+    background: #222;
 }
 header nav a:hover:after {
     content: "";
@@ -211,7 +212,7 @@ header nav a:hover:after {
     left: 39px;
     width: 12px;
     height: 12px;
-    background: rgba(50,50,50,1.0);
+    background: #222;
     
 -webkit-transform: scale(1) rotate(45deg) translate(0px, 0px) skew(0deg, 0deg);
    -moz-transform: scale(1) rotate(45deg) translate(0px, 0px) skew(0deg, 0deg);

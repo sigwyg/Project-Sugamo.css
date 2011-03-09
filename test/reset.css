@@ -39,8 +39,9 @@ table,th,td,img  {border:0;}
 caption,th       {text-align:left; font-weight:normal;}
 img,input        {vertical-align:middle;}
 ul               {list-style: disc;}
-q:before,q:after {content:'';}
-
+q:before { content: '\201C'}
+q:after  {content:'\201D';}
+del      { opacity: 0.6; }
 
 /* for HTML5
 -------------------------------------------------------------- */

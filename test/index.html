@@ -8,16 +8,25 @@
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+<script>
+window.onload = function(){
+    var query = window.location.hash;
+    if (!query){
+        window.location = '#about';
+        scrollTo(0,0);
+    }
+}
+</script>
 </head>
 <body class=""><div id="wrapper">
     <header>
-        <h1>Sugamo.css</h1>
+        <h1><a href="http://sugamocss.com/">Sugamo.css</a></h1>
         <nav>
             <ul>
-            <li id="nav1"><a href="./">Home</a></li>
-            <li id="nav2"><a href="./css3-samples.html#opacity">CSS3</a></li>
-            <li id="nav3"><del><a href="">Examples</a></del></li>
-            <li id="nav4"><del><a href="">Contact</a></del></li>
+            <li id="nav1"><a href="#about" title="Sugamo.cssとは？">About</a></li>
+            <li id="nav2"><a href="#place" title="会場について。無線環境など">会場の説明</a></li>
+            <li id="nav3"><a href="#atnd1" title="参加募集ページ">ATND一覧</a></li>
+            <li id="nav4"><a href="#entries" title="参加者のfollow-upなど">感想記事</a></li>
             </ul>
         </nav>
     </header>
@@ -27,57 +36,14 @@
 
 <!--: Start #right-column -->
 <div id="right-column">
-
-<!--: Start #atnd1 -->
-    <article id="atnd1">
-        <h1>ATND一覧</h1>
-        <dl>
-        <dt><time datetime="2011/03/05 14:00">2011/03/05 14:00</time></dt><dd><a href="http://atnd.org/events/13232">第26回 Sugamo.css</a></dd>
-        <dt><time datetime="2011/02/12 14:00">2011/02/12 14:00</time></dt><dd><a href="http://atnd.org/events/12166">第25回 Sugamo.css</a></dd>
-        <dt><time datetime="2011/01/08 14:00">2011/01/08 14:00</time></dt><dd><a href="http://atnd.org/events/10956">第24回 Sugamo.css</a></dd>
-        <dt><time datetime="2010/12/04 14:00">2010/12/04 14:00</time></dt><dd><a href="http://atnd.org/events/9793">第23回 Sugamo.css</a></dd>
-        <dt><time datetime="2010/11/06 14:00">2010/11/06 14:00</time></dt><dd><a href="http://atnd.org/events/9019">第22回 Sugamo.css</a></dd>
-        <dt><time datetime="2010/10/02 14:00">2010/10/02 14:00</time></dt><dd><a href="http://atnd.org/events/7826">第21回 Sugamo.css</a></dd>
-        <dt><time datetime="2010/09/04 14:00">2010/09/04 14:00</time></dt><dd><a href="http://atnd.org/events/7307">第20回 Sugamo.css</a></dd>
-        <dt><time datetime="2010/08/07 14:00">2010/08/07 14:00</time></dt><dd><a href="http://atnd.org/events/6396">第19回 Sugamo.css</a></dd>
-        <dt><time datetime="2010/07/03 14:00">2010/07/03 14:00</time></dt><dd><a href="http://atnd.org/events/5543">第18回 Sugamo.css</a></dd>
-        <dt><time datetime="2010/06/12 14:00">2010/06/12 14:00</time></dt><dd><a href="http://atnd.org/events/4613">第17回 Sugamo.css</a></dd>
-        <dt><time datetime="2010/05/08 14:00">2010/05/08 14:00</time></dt><dd><a href="http://atnd.org/events/3955">第16回 Sugamo.css</a></dd>
-        <dt><time datetime="2010/04/03 14:00">2010/04/03 14:00</time></dt><dd><a href="http://atnd.org/events/3735">第15回 Sugamo.css</a></dd>
-        <dt><time datetime="2010/03/13 14:00">2010/03/13 14:00</time></dt><dd><a href="http://atnd.org/events/3319">第14回 Sugamo.css</a></dd>
-        <dt><time datetime="2010/02/13 14:00">2010/02/13 14:00</time></dt><dd><a href="http://atnd.org/events/2923">第13回 Sugamo.css</a></dd>
-        <dt><time datetime="2010/01/16 14:00">2010/01/16 14:00</time></dt><dd><a href="http://atnd.org/events/2587">第12回 Sugamo.css</a></dd>
-        <dt><time datetime="2009/12/05 14:00">2009/12/05 14:00</time></dt><dd><a href="http://atnd.org/events/2189">第11回 Sugamo.css</a></dd>
-        <dt><time datetime="2009/11/07 14:00">2009/11/07 14:00</time></dt><dd><a href="http://atnd.org/events/1762">第10回 Sugamo.css</a></dd>
-        <dt><time datetime="2009/10/03 14:00">2009/10/03 14:00</time></dt><dd><a href="http://atnd.org/events/1564">第9回 Sugamo.css</a></dd>
-        </dl>
-        <aside>第1&ndash;11回まではmixiで募集していました。現在、mixiコミュは利用していません。</aside>    
-    </article>
-<!--: End #atnd1 -->
-
-
-<!--: Start #atnd2 -->
-    <article id="atnd2">
-        <h1>派生など</h1>
-        <dl>
-        <dt><time datetime="2011-02-12T10:00">2011/02/12 10:00</time></dt><dd><a href="http://atnd.org/events/12238">スガモンハン -逆鱗-</a></dd>
-        <dt><time datetime="2011-01-08T10:00">2011/01/08 10:00</time></dt><dd><a href="http://atnd.org/events/11499">スガモンハン</a></dd>
-        <dt><time datetime="2010-12-30T14:10">2010/12/30 14:10</time></dt><dd><a href="http://atnd.org/events/10441">Sugamo.mhp</a></dd>
-        <dt><time datetime="2010-11-27T14:00">2010/11/27 14:00</time></dt><dd><a href="http://atnd.org/events/9092">第３回 Sugamo.vim</a></dd>
-        <dt><time datetime="2010-11-03T13:00">2010/11/03 13:00</time></dt><dd><a href="http://atnd.org/events/9469">Sugamo.darts V5</a></dd>
-        <dt><time datetime="2010-09-19T08:00">2010/09/19 08:00</time></dt><dd><a href="http://atnd.org/events/7499">Sugamo.tour de 鎌倉</a></dd>
-        <dt><time datetime="2010-07-23T07:00">2010/07/23 07:00</time></dt><dd><a href="http://atnd.org/events/3956">第一回 Sugamo.fuji</a></dd>
-        <dt><time datetime="2010-06-27T15:00">2010/06/27 15:00</time></dt><dd><a href="http://atnd.org/events/5658">Sugamo.darts V5 (2/2)</a></dd>
-        <dt><time datetime="2010-06-26T15:00">2010/06/26 15:00</time></dt><dd><a href="http://atnd.org/events/5544">Sugamo.darts V5 (1/2)</a></dd>
-        <dt><time datetime="2010-04-24T15:00">2010/04/24 15:00</time></dt><dd><a href="http://atnd.org/events/3957">Sugamo.darts V4</a></dd>
-        <dt><time datetime="2010-04-10T14:00">2010/04/10 14:00</time></dt><dd><a href="http://atnd.org/events/3545">第二回 Sugamo.vim</a></dd>
-        <dt><time datetime="2010-01-23T17:00">2010/01/23 17:00</time></dt><dd><a href="http://atnd.org/events/2869">Sugamo.darts V3</a></dd>
-        <dt><time datetime="2010-01-16T19:00">2010/01/16 19:00</time></dt><dd><a href="http://atnd.org/events/2609">Sugamo.nabe</a></dd>
-        <dt><time datetime="2009-12-19T18:00">2009/12/19 18:00</time></dt><dd><a href="http://atnd.org/events/2588">Sugamo.darts V2</a></dd>
-        </dl>
-    </article>
-<!--: End #atnd2 -->
-
+    <nav>
+        <h1>その他</h1>
+        <ul>
+        <li><a href="#atnd2">派生イベントなど</a></li>
+        <li><a href="#member">過去の参加者</a></li>
+        <li><a href="#contact">連絡先</a></li>
+        </ul>
+    </nav>
 </div>
 <!--: End #right-column -->
 
@@ -88,21 +54,11 @@
 <!--: Start #left-column -->
 <div id="left-column">
     <article id="nextSugamo">
-        <h1>Next</h1>
+        <h1>次回</h1>
         <p>
-            <span class="month">04</span>/<span class="date">02</span>
+        <a href=""><span class="month">04</span>/<span class="date">02</span></a><span class="suffix">です！</span>
         </p>
     </article>
-    <nav>
-        <h1>Contents</h1>
-        <ul>
-        <li><a href="#about">Sugamo.cssとは？</a></li>
-        <li><a href="#place">会場について</a></li>
-        <li><a href="#atnd1">ATND一覧</a></li>
-        <li><a href="#atnd2">派生など</a></li>
-        <li><a href="#member">過去の参加者</a></li>
-        </ul>
-    </nav>
 </div>
 <!--: End #left-column -->
 
@@ -137,7 +93,7 @@
     <article id="place">
         <h1>会場について</h1>
         <p>都内各所の銀座ルノアール貸し会議室(マイスペース)でやっています。どこぞの会社の会議室を借りるということは基本的にしません。「自分のテリトリーから出てくる」ということが重要なのです。各回の参加者は20名前後、参加費は（場所代として）各人1,000&ndash;1,500円ほど頂いています。</p>
-        <p>ノートPCがあった方がいろいろ楽です。無線環境として、新宿区役所横店ではEmobileは微妙。Livedoor Wirelessはどの店でも安心して使えます。ただ、FonおよびLivedoor Wirelessは認証に難がありまして、あらかじめMACアドレス認証しておくことを強く推奨します。</p>
+        <p>ノートPCがあった方がいろいろ楽です。無線環境として、新宿区役所横店ではWiMAXは微妙。Emobileはそこそこ。Livedoor Wirelessは<del>どの店でも安心して使えます。ただ、FonおよびLivedoor Wirelessは認証に難がありまして、あらかじめMACアドレス認証しておくことを強く推奨します</del><ins>FONとLiveddor Wirelessの提供が終了したため、<code>orz</code>な感じです</ins>。</p>
         <p>当日は 現地集合！ ぐだぐだ話しましょう。</p>
         <p>あと、補欠とか気にせず来たい人は来ちゃってください。事前の参加表明は人数の目安であって、椅子の確保を意味するモノではありません。人数多いと遅刻したら椅子がないかもねってだけの話なのでね！ 椅子がなくても座れば良いじゃない。</p>
 
@@ -255,11 +211,376 @@
         <li><a href="http://twitter.com/#!/seijimomoto">seijimomoto</a></li>
         <li><a href="http://twitter.com/#!/rika_t">rika_t</a></li>
         <li><a href="http://twitter.com/#!/MrAdults_taka">MrAdults_taka</a></li>
+        <li><a href="http://twitter.com/#!/noir44_aihara">noir44_aihara</a></li>
+        <li><a href="http://twitter.com/#!/tusimarimo">tusimarimo</a></li>
+        <li><a href="http://twitter.com/#!/gakkiy">gakkiy</a></li>
+        <li><a href="http://twitter.com/#!/180mm">180mm</a></li>
+        <li><a href="http://twitter.com/#!/ykhs">ykhs</a></li>
         </ol>
       
     </article>
 <!--: End #member -->
 
+
+<!--: Start #atnd1 -->
+    <article id="atnd1">
+        <h1>ATND一覧</h1>
+        <dl>
+        <dt><time datetime="2011/03/05T14:00">2011/03/05 14:00</time></dt><dd><a href="http://atnd.org/events/13232">第26回 Sugamo.css</a></dd>
+        <dt><time datetime="2011/02/12T14:00">2011/02/12 14:00</time></dt><dd><a href="http://atnd.org/events/12166">第25回 Sugamo.css</a></dd>
+        <dt><time datetime="2011/01/08T14:00">2011/01/08 14:00</time></dt><dd><a href="http://atnd.org/events/10956">第24回 Sugamo.css</a></dd>
+        <dt><time datetime="2010/12/04T14:00">2010/12/04 14:00</time></dt><dd><a href="http://atnd.org/events/9793">第23回 Sugamo.css</a></dd>
+        <dt><time datetime="2010/11/06T14:00">2010/11/06 14:00</time></dt><dd><a href="http://atnd.org/events/9019">第22回 Sugamo.css</a></dd>
+        <dt><time datetime="2010/10/02T14:00">2010/10/02 14:00</time></dt><dd><a href="http://atnd.org/events/7826">第21回 Sugamo.css</a></dd>
+        <dt><time datetime="2010/09/04T14:00">2010/09/04 14:00</time></dt><dd><a href="http://atnd.org/events/7307">第20回 Sugamo.css</a></dd>
+        <dt><time datetime="2010/08/07T14:00">2010/08/07 14:00</time></dt><dd><a href="http://atnd.org/events/6396">第19回 Sugamo.css</a></dd>
+        <dt><time datetime="2010/07/03T14:00">2010/07/03 14:00</time></dt><dd><a href="http://atnd.org/events/5543">第18回 Sugamo.css</a></dd>
+        <dt><time datetime="2010/06/12T14:00">2010/06/12 14:00</time></dt><dd><a href="http://atnd.org/events/4613">第17回 Sugamo.css</a></dd>
+        <dt><time datetime="2010/05/08T14:00">2010/05/08 14:00</time></dt><dd><a href="http://atnd.org/events/3955">第16回 Sugamo.css</a></dd>
+        <dt><time datetime="2010/04/03T14:00">2010/04/03 14:00</time></dt><dd><a href="http://atnd.org/events/3735">第15回 Sugamo.css</a></dd>
+        <dt><time datetime="2010/03/13T14:00">2010/03/13 14:00</time></dt><dd><a href="http://atnd.org/events/3319">第14回 Sugamo.css</a></dd>
+        <dt><time datetime="2010/02/13T14:00">2010/02/13 14:00</time></dt><dd><a href="http://atnd.org/events/2923">第13回 Sugamo.css</a></dd>
+        <dt><time datetime="2010/01/16T14:00">2010/01/16 14:00</time></dt><dd><a href="http://atnd.org/events/2587">第12回 Sugamo.css</a></dd>
+        <dt><time datetime="2009/12/05T14:00">2009/12/05 14:00</time></dt><dd><a href="http://atnd.org/events/2189">第11回 Sugamo.css</a></dd>
+        <dt><time datetime="2009/11/07T14:00">2009/11/07 14:00</time></dt><dd><a href="http://atnd.org/events/1762">第10回 Sugamo.css</a></dd>
+        <dt><time datetime="2009/10/03T14:00">2009/10/03 14:00</time></dt><dd><a href="http://atnd.org/events/1564">第9回 Sugamo.css</a></dd>
+        </dl>
+        <aside>第1&ndash;11回まではmixiで募集していました。現在、mixiコミュは利用していません。</aside>    
+    </article>
+<!--: End #atnd1 -->
+
+
+<!--: Start #atnd2 -->
+    <article id="atnd2">
+        <h1>派生など</h1>
+        <dl>
+        <dt><time datetime="2011-02-12T10:00">2011/02/12 10:00</time></dt><dd><a href="http://atnd.org/events/12238">スガモンハン -逆鱗-</a></dd>
+        <dt><time datetime="2011-01-08T10:00">2011/01/08 10:00</time></dt><dd><a href="http://atnd.org/events/11499">スガモンハン</a></dd>
+        <dt><time datetime="2010-12-30T14:10">2010/12/30 14:10</time></dt><dd><a href="http://atnd.org/events/10441">Sugamo.mhp</a></dd>
+        <dt><time datetime="2010-11-27T14:00">2010/11/27 14:00</time></dt><dd><a href="http://atnd.org/events/9092">第３回 Sugamo.vim</a></dd>
+        <dt><time datetime="2010-11-03T13:00">2010/11/03 13:00</time></dt><dd><a href="http://atnd.org/events/9469">Sugamo.darts V5</a></dd>
+        <dt><time datetime="2010-09-19T08:00">2010/09/19 08:00</time></dt><dd><a href="http://atnd.org/events/7499">Sugamo.tour de 鎌倉</a></dd>
+        <dt><time datetime="2010-07-23T07:00">2010/07/23 07:00</time></dt><dd><a href="http://atnd.org/events/3956">第一回 Sugamo.fuji</a></dd>
+        <dt><time datetime="2010-06-27T15:00">2010/06/27 15:00</time></dt><dd><a href="http://atnd.org/events/5658">Sugamo.darts V5 (2/2)</a></dd>
+        <dt><time datetime="2010-06-26T15:00">2010/06/26 15:00</time></dt><dd><a href="http://atnd.org/events/5544">Sugamo.darts V5 (1/2)</a></dd>
+        <dt><time datetime="2010-04-24T15:00">2010/04/24 15:00</time></dt><dd><a href="http://atnd.org/events/3957">Sugamo.darts V4</a></dd>
+        <dt><time datetime="2010-04-10T14:00">2010/04/10 14:00</time></dt><dd><a href="http://atnd.org/events/3545">第二回 Sugamo.vim</a></dd>
+        <dt><time datetime="2010-01-23T17:00">2010/01/23 17:00</time></dt><dd><a href="http://atnd.org/events/2869">Sugamo.darts V3</a></dd>
+        <dt><time datetime="2010-01-16T19:00">2010/01/16 19:00</time></dt><dd><a href="http://atnd.org/events/2609">Sugamo.nabe</a></dd>
+        <dt><time datetime="2009-12-19T18:00">2009/12/19 18:00</time></dt><dd><a href="http://atnd.org/events/2588">Sugamo.darts V2</a></dd>
+        </dl>
+    </article>
+<!--: End #atnd2 -->
+
+
+<!--: Start #entries -->
+    <article id="entries">
+        <h1>感想エントリ</h1>
+        <p>参加者の感想エントリなど。</p>
+        <dl>
+<!--
+        <dt>第26回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            </ul>
+        </dd>
+        <dt>第25回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            </ul>
+        </dd>
+        <dt>第24回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            </ul>
+        </dd>
+        <dt>第23回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            </ul>
+        </dd>
+        <dt>第22回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            </ul>
+        </dd>
+        <dt>第21回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            </ul>
+        </dd>
+        <dt>第20回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            </ul>
+        </dd>
+        <dt>第19回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            </ul>
+        </dd>
+        <dt>第18回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            </ul>
+        </dd>
+        <dt>第17回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            </ul>
+        </dd>
+        <dt>第16回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            </ul>
+        </dd>
+        <dt>第15回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            </ul>
+        </dd>
+        <dt>第14回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            </ul>
+        </dd>
+        <dt>第13回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            </ul>
+        </dd>
+        <dt>第12回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            </ul>
+        </dd>
+        <dt>第11回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            </ul>
+        </dd>
+-->    
+        <dt>第10回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href="http://archiva.jp/web/sugamo_css/sugamo_css_10.html">第10回 Sugamo.cssまとめ</a>, <cite>Archiva</cite></li>
+            <li><a href="http://www.yomotsu.net/wp/?p=547">第 10 回 sugamo.css</a>, <cite>ヨモツネット</cite></li>
+            </ul>
+        </dd>
+        <dt>第9回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href="http://archiva.jp/web/sugamo_css/sugamo_css_08.html">第８回 Sugamo.cssまとめ</a>, <cite>Archiva</cite></li>
+            <li><a href="http://www.yomotsu.net/wp/?p=545">第 8 回 sugamo.css</a>, <cite>ヨモツネット</cite></li>
+            <li><a href="http://www.louise-louisa.com/blog/archives/160">第捌回Sugamo.css</a>, <cite>Louise-Louisa.com</cite></li>
+            </ul>
+        </dd>
+        <dt>第8回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            <li><a href=""></a>, <cite></cite></li>
+            </ul>
+        </dd>
+        <dt>第7回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href="http://archiva.jp/web/sugamo_css/sugamo_css_07.html">第７回 Sugamo.cssまとめ</a>, <cite>Archiva</cite></li>
+            <li><a href="http://www.louise-louisa.com/blog/archives/131">第漆回 Sugamo.css</a>, <cite>Louise-Louisa.com</cite></li>
+            <li><a href="http://gyauza.egoism.jp/clip/archives/2009/08/sugamocssmod/">sugamo.cssで発表したmod組み（仮）</a>, <cite>Takazudo Clipping*</cite></li>
+            </ul>
+        </dd>
+        <dt>第6回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href="http://archiva.jp/web/sugamo_css/sugamo_css_06.html">第６回 Sugamo.cssまとめ</a>, <cite>Archiva</cite></li>
+            <li><a href="http://www.yomotsu.net/wp/?p=540">第 6回 Sugamo.css</a>, <cite>ヨモツネット</cite></li>
+            <li><a href="http://d.hatena.ne.jp/sakaki0214/20090721/1248107915">第陸回 Sugamo.css</a>, <cite>これからゆっくり考L</cite></li> 
+            </ul>
+        </dd>
+        <dt>第5回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href="http://archiva.jp/web/sugamo_css/sugamo_css_05.html">第５回 Sugamo.cssまとめ</a>, <cite>Archiva</cite></li>
+            <li><a href="http://d.hatena.ne.jp/neotag/20090620/1245514682">Sugamo.css 第五回</a>, <cite>neotagの雑文</cite></li>
+            <li><a href="http://d.hatena.ne.jp/sakaki0214/20090621/1245530811">第伍回 Sugamo.cssレポ</a>, <cite>これからゆっくり考L</cite></li>
+            <li><a href="http://www.red-mount.com/blogs/show/sugamo_css_5">Sugamo.css#5行ってきた</a>, <cite>RED-MOUNT.COM</cite></li>
+            <li><a href="http://likealunatic.jp/2009/06/21_sugamocss5.php">Sugamo.css第5回に参加したメモ</a>, <cite>Like@Lunatic</cite></li>
+            <li><a href="http://www.yomotsu.net/wp/?p=533">第 5 回 sugamo.css</a>, <cite>ヨモツネット</cite></li>
+            <li><a href="http://www.songmu.jp/riji/archives/2009/06/sugamocss5.html">Sugamo.CSS#5</a>, <cite>おそらくはそれさえも平凡な日々</cite></li>
+            </ul>
+        </dd>
+        <dt>第4回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href="http://archiva.jp/web/sugamo_css/sugamo_css_04.html">第４回 Sugamo.css</a>, <cite>Archiva</cite></li>
+            <li><a href="http://d.hatena.ne.jp/neotag/20090516/1242482634">第4回 sugamo.css (2009-05-16) のまとめ</a>, <cite>neotagの雑文</cite></li>
+            <li><a href="http://www.skuare.net/monipla/2009/05/4sugamocss.html">第4回sugamo.cssにお邪魔してみた</a>, <cite>すくえあ</cite></li>
+            <li><a href="http://d.hatena.ne.jp/sakaki0214/20090517/1242496921">第4回sugamo.cssに参加してきました</a>, <cite>これからゆっくり考l</cite></li>
+            <li><a href="http://www.yomotsu.net/wp/?p=523">第 4 回 sugamo.css</a>, <cite>ヨモツネット</cite></li>
+            <li><a href="http://www.songmu.jp/riji/archives/2009/05/sugamocss.html#more">sugamo.cssに行ってきた</a>, <cite>おそらくはそれさえも平凡な日々</cite></li>
+            </ul>
+        </dd>
+        <dt>第3回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href="http://www.yomotsu.net/wp/?p=517">第 3 回 sugamo.css</a>, <cite>ヨモツネット</cite></li>
+            <li><a href="http://d.hatena.ne.jp/sakaki0214/20090419/1240121681">第三回sugamo.cssに参加してきた</a>, <cite>これからゆっくり考L</cite></li>
+            </ul>
+        </dd>
+        <dt>第2回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href="http://www.yomotsu.net/wp/?p=508">sugamo.css</a>, <cite>ヨモツネット</cite></li>
+            <li><a href="http://webtech-walker.com/archive/2009/03/20210025.html">sugamo.cssにいってきました</a>, <cite>Webtech Walker</cite></li>
+            </ul>
+        </dd>
+        <dt>第1回Sugamo.css</dt>
+        <dd>
+            <ul>
+            <li><a href="http://archiva.jp/web/sugamo_css/sugamo_css.html">Sugamo.cssってのをやってます</a>, <cite>Archiva</cite></li>
+            </ul>
+        </dd>
+        </dl>
+    </article>
+<!--: End #atnd2 -->
+
+
+<!--: Start #contact -->
+    <article id="contact">
+        <h1>連絡先</h1>
+        <p><a href="http://sugamocss.com/">Sugamocss.com</a>は、今のところ主催のSig.が管理しています。Sugamo.css(イベント)およびSugamocss.com(サイト)へのご意見・ご要望・お問い合わせは<a href="http://twitter.com/sigwyg/">@sigwyg</a>まで。</p>
+        <table>
+            <tr>
+                <th>主催のTwitter</th>
+                <td><a href="http://twitter.com/sigwyg">@sigwyg</a></td>
+            </tr>
+            <tr>
+                <th>広報用Twitter</th>
+                <td><a href="http://twitter.com/Sugamo_css">@Sugamo_css</a></td>
+            </tr>
+        </table>
+        <p>なお、広報用のTwitterアカウント<a href="http://twitter.com/Sugamo_css">@Sugamo_css</a>は送信専用です。reply飛ばしても気付かないことが多いので、ご注意ください！</p>
+        <aside>Sugamocss.comはデザイン募集中です！</aside>
+    </article>
+<!--: End #contact -->
 
 
 </div><!-- end #center-column -->

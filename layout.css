@@ -133,11 +133,11 @@ a:hover {
 
 header {
     position: relative;
-    padding: 1em 0 1.5em 5px;
+    padding: 1em 0 2em 5px;
     text-align: left;
 }
 header h1 {
-    font-family: "Apple Chancery", "Georgia", serif;
+    font-family: "Apple Chancery", serif;
     text-shadow: -1px -1px 0px #fff;
     font-size: 36px;
 }

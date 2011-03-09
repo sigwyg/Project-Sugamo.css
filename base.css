@@ -98,17 +98,18 @@
         padding-bottom: 20px;
     }
     #center-column {
-        width: 320px;
         float: none;
-        background-color: #fff;
+        width: 310px;
+        margin: 0 auto;
         color: #333;
+        background-color: #fff;
     
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         border-radius: 10px;
     }
     #center-column article:target {
-        width: 280px;
+        width: 270px;
     }
     #member ol {
         float: left;

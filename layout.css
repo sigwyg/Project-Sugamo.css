@@ -29,7 +29,7 @@ body {
     text-align: center;
     
     font-family: "Hiragino Kaku Gothic Pro", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
-    line-height: 1.2;
+    line-height: 1.75;
     font-size: 12px;
 }
 #wrapper {
@@ -137,7 +137,9 @@ header {
     text-align: left;
 }
 header h1 {
-    font-family: "Apple Chancery","Segoe Print", "Comic Sans MS", serif;
+    font-family: "Gabriola","Apple Chancery","Segoe Print", "Comic Sans MS", serif;
+    font-style: oblique;
+    font-stretch: ultra-expanded;
     text-shadow: -1px -1px 0px #fff;
     font-size: 36px;
 }
@@ -239,18 +241,31 @@ footer {
 /* vertical grids
 -------------------------------------------------------------- 
  * 
- * Basic 14px Rule
+ * Basic 12px Rule
  *  - 14px * 1.2 = 16.8px
  *  - 12px * 1.4 = 16.8px
- *  - 24px * 1.4 = 33.6px
  *  - 21px * 1.6 = 33.6px
+ *  - 24px * 1.4 = 33.6px
  *  - 1.4 * 2 = 2.8 = 0.8 + 2.0em
  *  - 12px, 14px, 18px, 21px, 24px, 36px, 48px, 60px, 72px
  *  
  *  font-size: 14px; line-height: 1.2; margin-bottom: 1.2em;
  *  font-size: 12px; line-height: 1.4; margin-bottom: 1.4em;
- *  font-size: 24px; line-height: 1.4; margin-bottom: 0.8em; margin-top: 2em;
  *  font-size: 21px; line-height: 1.6; margin-bottom: 0.8em; margin-top: 2em;
+ *  font-size: 24px; line-height: 1.4; margin-bottom: 0.8em; margin-top: 2em;
+ *  
+ * Basic 14px Rule
+ *  - 14px * 1.5  = 21px
+ *  - 12px * 1.75 = 21px
+ *  - 21px * 1.0  = 31px
+ *  - 24px * 1.75 = 42px
+ *  - 1.75 = 0.25 + 1.5em
+ *  - 12px, 14px, 18px, 21px, 24px, 36px, 48px, 60px, 72px
+ *  
+ *  font-size: 14px; line-height: 1.5;  margin-bottom: 1.5em;
+ *  font-size: 12px; line-height: 1.75; margin-bottom: 1.75em;
+ *  font-size: 21px; line-height: 1.0;  margin-bottom: 0.0em;  margin-top: 1em;
+ *  font-size: 24px; line-height: 1.75; margin-bottom: 0.25em; margin-top: 1.5em;
  *  
 -------------------------------------------------------------- */
 
@@ -258,25 +273,26 @@ footer {
 article h1, section h1 { 
     font-family: "Big Caslon","Cochin","ＭＳ Ｐ明朝","Georgia", serif;
     font-size: 24px;
-    line-height: 1.4;
-    margin-top: 2em;
-    margin-bottom: 0.8em;
+    line-height: 1.75;
+    margin-top: 1.5em;
+    margin-bottom: 0.25em;
 }
 article h2, section h2,
 article section h1 {
     font-family: "Big Caslon","Cochin","ＭＳ Ｐ明朝","Georgia", serif;
     font-size: 21px;
-    line-height: 1.6;
-    margin-top: 2em;
-    margin-bottom: 0.8em;
+    line-height: 1.0;
+    margin-top: 0em;
+    padding-top: 0.75em;
+    margin-bottom: 0.25em;
 
 }
 #right-column h1,
 #left-column h1 {
     font-family: "Big Caslon","Cochin","Times New Roman","Georgia", serif;
     font-size: 21px;
-    line-height: 1.6;
-    margin-top: 1.4em;
+    line-height: 1.0;
+    margin-top: 1em;
     margin-bottom: 0em;
     color: #f0f0f0;
 }
@@ -287,19 +303,52 @@ article section h1 {
 #center-column dl,
 #center-column table,
 #center-column pre {
-    margin-bottom: 1.2em;
+    margin-bottom: 1.75em;
 }
 #right-column ul,
 #left-column ul,
 code, aside {
     font-size: 12px;
-    line-height: 1.4;
-    margin-bottom: 1.4em;
+    line-height: 1.75;
+    margin-bottom: 1.75em;
 }
 #center-column ul,
 #center-column ol {
-    line-height: 1.4;
 }
+
+/* blockquote */
+#contents blockquote,
+#contents aside {
+    border: 1px dotted #333;
+    border-width: 1px 0;
+    margin-top: -2px;
+    margin-bottom: 1.75em;
+    padding: 0.875em 2em;
+    
+    font-size: 12px;
+    line-height: 1.75;
+    background: #eee;
+}
+#contents blockquote cite {
+    display: block;
+    text-align: right;
+    margin-top: -1.75em;
+}
+#contents blockquote cite:before {
+    content: "\2014";
+}
+
+/* aside */
+#contents aside {
+    background: #353535;
+    color: #eee;
+    border-color: #eee;
+    border-style: solid;
+}
+aside:before {
+    content: "※";
+}
+
 
 /* left-column
  *  - width: 180px
@@ -323,14 +372,14 @@ code, aside {
 #nextSugamo p {
     border: 1px dotted #ccc;
     border-width: 1px 0;
-    padding: 15.8px 0; /* Base 16.8px - Border 1px */
+    padding: 10.5px 0; /* Base 21px - Border 1px */
     
     color: #999;
     font-size: 32px;
     font-family: "Cochin","Times New Roman", serif;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 200;
-    line-height: 1.05; /* 33.6 / 32 = 1.05 */
+    line-height: 1.3125; /* 42 / 32 = 1.3125 */
     text-align: center;
 }
 #nextSugamo a {
@@ -370,7 +419,7 @@ code, aside {
 #right-column ol {
     border: 1px dotted #ccc;
     border-width: 1px 0;
-    padding: 15.8px 0; /* Base 16.8px - Border 1px */
+    padding: 10.5px 0; /* Base 21px - Border 1px */
 }
 #right-column ol {
     margin-left: 2em;
@@ -379,8 +428,6 @@ code, aside {
     list-style-type: none;
 }
 #right-column li {
-    padding: 2px 0 1px;
-    line-height: 1.5;
 }
 #right-column li a,
 #right-column dd a {
@@ -450,41 +497,6 @@ code, aside {
 }
 #center-column tr:hover {
     background-color: #f3f3ff;
-}
-
-/* blockquote */
-#contents blockquote,
-#contents aside {
-    border: 1px dotted #333;
-    border-width: 1px 0;
-    margin-top: -2px;
-    margin-bottom: 1.5em;
-    padding: 0.875em 2.3334em;
-    
-    font-size: 12px;
-    line-height: 1.75;
-    background: #eee;
-}
-#contents blockquote p {
-}
-#contents blockquote cite {
-    display: block;
-    text-align: right;
-    margin-top: -1.75em;
-}
-#contents blockquote cite:before {
-    content: "\2014";
-}
-
-/* aside */
-#contents aside {
-    background: #353535;
-    color: #eee;
-    border-color: #eee;
-    border-style: solid;
-}
-aside:before {
-    content: "※";
 }
 
 /* member */

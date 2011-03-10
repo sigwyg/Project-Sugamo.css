@@ -33,6 +33,9 @@
     #wrapper {
         width: 316px;
     }
+    header {
+        padding: 1em 0 2em;
+    }
     header nav {
         position: relative;
         right: 0;

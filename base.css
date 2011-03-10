@@ -31,7 +31,7 @@
        screen and (-webkit-min-device-pixel-ratio: 1.5){
 
     #wrapper {
-        width: 310px;
+        width: 316px;
     }
     header nav {
         position: relative;
@@ -66,7 +66,7 @@
     #column-wrapper {
         position: relative;
         left: 0px;
-        width: 310px;
+        width: 316px;
         margin-bottom: 3em;
         background: #111;
         color: #eee;
@@ -76,7 +76,7 @@
         position: relative;
         top: 0px;
         margin-left: 0px;
-        width: 310px;
+        width: 316px;
         padding-bottom: 20px;
         margin-top: 0;
         
@@ -85,7 +85,7 @@
     }
     #right-column {
         float: none;
-        width: 310px;
+        width: 316px;
         margin-top: 0;
     }
     #right-column nav:first-child h1 {

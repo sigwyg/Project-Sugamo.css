@@ -31,7 +31,7 @@
        screen and (-webkit-min-device-pixel-ratio: 1.5){
 
     #wrapper {
-        width: 320px;
+        width: 310px;
     }
     header nav {
         position: relative;
@@ -66,7 +66,7 @@
     #column-wrapper {
         position: relative;
         left: 0px;
-        width: 320px;
+        width: 310px;
         margin-bottom: 3em;
         background: #111;
         color: #eee;
@@ -76,7 +76,7 @@
         position: relative;
         top: 0px;
         margin-left: 0px;
-        width: 320px;
+        width: 310px;
         padding-bottom: 20px;
         margin-top: 0;
         
@@ -85,7 +85,7 @@
     }
     #right-column {
         float: none;
-        width: 320px;
+        width: 310px;
         margin-top: 0;
     }
     #right-column nav:first-child h1 {
@@ -94,12 +94,12 @@
     }
     #left-column {
         float: none;
-        width: 320px;
+        width: 310px;
         padding-bottom: 20px;
     }
     #center-column {
         float: none;
-        width: 310px;
+        width: 300px;
         margin: 0 auto;
         color: #333;
         background-color: #fff;
@@ -109,11 +109,11 @@
         border-radius: 10px;
     }
     #center-column article:target {
-        width: 270px;
+        width: 260px;
     }
     #member ol {
         float: left;
-        width: 104px;
+        width: 100px;
         margin-left: 2.5em;
     }
     footer {

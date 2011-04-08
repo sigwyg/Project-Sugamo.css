@@ -31,98 +31,40 @@
        screen and (-webkit-min-device-pixel-ratio: 1.5){
 
     #wrapper {
-        width: 316px;
+        width: 360px;
     }
     header {
-        padding: 1em 0 2em;
+        float: none;
+        width: 360px;
+    }
+    header h1 {
+        width: 360px;
+    }
+    header h1 a {
     }
     header nav {
-        position: relative;
-        right: 0;
-        top: 0;
-        margin: 1em 0 0;
+        width: 360px;
     }
-    header nav ul {
-        margin: 0;
-    }
-    header nav li {
-        display: inline-block;
-        width: auto;
-        height: auto;
-        border-left: 1px dotted #ccc;
-        list-style-type: none;
-        text-align: center;
-    }
-    header nav a {
-        position: relative;
-        display: inline-block;
-        width: auto;
-        height: auto;
-        padding: 0.5em 1em;
-        line-height: 1.5;
-    }
-    header nav a:hover:after {
-        bottom: -5px;
-        left: 15px;
+    header nav li a {
+        height: 3em;
+        width: 90px;
     }
     
-    #column-wrapper {
-        position: relative;
-        left: 0px;
-        width: 316px;
-        margin-bottom: 3em;
-        background: #111;
-        color: #eee;
-        margin-top: 0;
-    }
     #contents {
-        position: relative;
-        top: 0px;
-        margin-left: 0px;
-        width: 316px;
-        padding-bottom: 20px;
-        margin-top: 0;
+        float: none;
+        margin-left: 0;
+        padding: 0px;
+    }
+    #contents article:target {
+        width: 360px;
         
-        background: #111;
-        color: #eee;
     }
-    #right-column {
-        float: none;
-        width: 316px;
-        margin-top: 0;
-    }
-    #right-column nav:first-child h1 {
-        margin-top: 0px;
-        padding-top: 20px;
-    }
-    #left-column {
-        float: none;
-        width: 310px;
-        padding-bottom: 20px;
-    }
-    #center-column {
-        float: none;
-        width: 300px;
-        margin: 0 auto;
-        color: #333;
-        background-color: #fff;
     
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-    }
-    #center-column article:target {
-        width: 260px;
-    }
-    #member ol {
-        float: left;
-        width: 100px;
-        margin-left: 2.5em;
-    }
     footer {
-        text-align: center;
+        color: #fcfaf2; /* Shironeri */
+        background: #0c0c0c; /* Ro */
+        padding: 1em;
     }
-        
 }
 
 

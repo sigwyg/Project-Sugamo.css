@@ -31,23 +31,23 @@
        screen and (-webkit-min-device-pixel-ratio: 1.5){
 
     #wrapper {
-        width: 360px;
+        width: 320px;
     }
     header {
         float: none;
-        width: 360px;
+        width: 320px;
     }
     header h1 {
-        width: 360px;
+        width: 320px;
     }
     header h1 a {
     }
     header nav {
-        width: 360px;
+        width: 320px;
     }
     header nav li a {
         height: 3em;
-        width: 90px;
+        width: 80px;
     }
     
     #contents {
@@ -56,7 +56,7 @@
         padding: 0px;
     }
     #contents article:target {
-        width: 360px;
+        width: 320px;
         
     }
     

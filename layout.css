@@ -124,11 +124,6 @@ header nav li a:visited {
     vertical-align: middle;
     color: #fffffb; /* Gofun */
     background: #0c0c0c; /* Ro */
-    
-    -webkit-transition: all .6s ease;
-       -moz-transition: all .6s ease;
-         -o-transition: all .6s ease;
-            transition: all .6s ease;
 }
 header nav li:nth-child(3n) a,
 header nav li:nth-child(5n-3) a{

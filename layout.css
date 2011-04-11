@@ -7,14 +7,11 @@
 
  1 : body
    : link
- 1 : column
  2 : header
  3 : navi
  5 : footer
  6 : vertical grids
- 7 : left-column
- 8 : right-column
- 9 : center-column
+ 7 : contents
 
  
 --------------------------------------------------------------
@@ -62,10 +59,6 @@ a:hover {
 }
 
 
-/* columns
--------------------------------------------------------------- */
-
-
 /* header
 -------------------------------------------------------------- */
 
@@ -86,6 +79,7 @@ header h1 a:visited {
     height: 300px;
     
     font-weight: 900;
+    font-family: "Helvetica", "Arial", sans-serif;
     color: #fffffb; /* Gofun */
     text-decoration: none;
 

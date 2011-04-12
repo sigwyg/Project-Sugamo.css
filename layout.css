@@ -252,16 +252,15 @@ aside:before {
     width: 0;
     height: 0;
     overflow: hidden;
-}
-#contents article:target {
-    width: 646px;
-    height: auto;
     
     -webkit-transition: all .6s ease;
     -moz-transition: all .6s ease;
     -o-transition: all .6s ease;
     transition: all .6s ease;
-    
+}
+#contents article:target {
+    width: 646px;
+    height: auto;
 }
 
 #atnd1 dt,

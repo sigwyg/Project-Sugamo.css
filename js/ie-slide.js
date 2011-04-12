@@ -9,10 +9,13 @@
 // -----------------------------
 
 
-var slideFunc = function(navLinks,articles){
+var slideFunc = function(e,navLinks,articles){
     if(!window.event) return false;
     
-    var hash   = window.location.hash.substring(1);
+    var hash;
+    if(e) hash = e.srcElement.href.split('#')[1];
+    else  hash = 'about';
+    
     var target = document.getElementById(hash);
     
     for(var i=0;i<articles.length;i++){
@@ -64,16 +67,13 @@ eventAdd(window, 'load', function(){
 
     // add Event
     for(var i=0;i<navLinks.length;i++){
-        eventAdd(navLinks[i],'click',function(){ slideFunc(navLinks,articles) },false);
+        eventAdd(navLinks[i],'click',function(e){ slideFunc(e,navLinks,articles) },false);
     }                        
     
     // load init
-    var query = window.location.hash;
-    if (!query){
-        window.location = '#about';
-        slideFunc(navLinks,articles);
-        scrollTo(0,0);
-    }
+    var e;
+    slideFunc(e,navLinks,articles);
+    scrollTo(0,0);
 
 }, false);
 

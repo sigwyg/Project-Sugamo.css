@@ -62,7 +62,8 @@ eventAdd(window, 'load', function(){
 
     var articles = [];
     for(var i=0;i<navLinks.length;i++){
-        articles.push(document.getElementById(navLinks[i].href.split('#')[1]));
+        var tar = document.getElementById(navLinks[i].href.split('#')[1]);
+        if(tar){ articles.push(tar) }
     }
 
     // add Event

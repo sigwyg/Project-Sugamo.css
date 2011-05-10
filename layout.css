@@ -183,7 +183,7 @@ article h1, section h1 {
     margin-bottom: 0.25em;
 }
 article h2, section h2,
-article section h1 {
+article section h1, article article h1 {
     font-family: "Big Caslon","Cochin","ＭＳ Ｐ明朝","Georgia", serif;
     font-size: 21px;
     line-height: 1.0;
@@ -258,7 +258,8 @@ aside:before {
     -o-transition: all .6s ease;
     transition: all .6s ease;
 }
-#contents article:target {
+#contents article:target,
+#contents article.entry {
     width: 646px;
     height: auto;
 }

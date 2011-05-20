@@ -267,6 +267,22 @@ aside:before {
     height: auto;
 }
 
+#contents article article h1 {
+    position: relative;
+    display: inline-block;
+}
+#contents article article h1:after {
+    content: "";    
+    position: absolute;
+    bottom: 0.4em;
+    left: 100%;
+    
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #eee;
+    margin-left: 0.5em;
+    width: 1000px;
+    height: 0;
+}
 #atnd1 dt,
 #atnd2 dt {
     float: left;
@@ -286,3 +302,4 @@ aside:before {
     margin-left: 2.5em;
     padding-right: 2em;
 }
+

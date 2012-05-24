@@ -285,12 +285,15 @@ aside:before {
     border-bottom: 1px solid #999;
     
     font-family: Courier, monosoace;
+    vertical-align: bottom;
 }
 #atnd1 dd,
 #atnd2 dd {
     display: inline-block;
     width: 520px;
     border-bottom: 1px solid #999;
+    vertical-align: bottom;
+}
 }
 
 #member ol {

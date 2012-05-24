@@ -294,10 +294,9 @@ aside:before {
     border-bottom: 1px solid #999;
     vertical-align: bottom;
 }
-}
 
 #member ol {
-    float: left;
+    display: inline-block;
     margin-left: 3em;
     padding-right: 2em;
 }

@@ -117,6 +117,10 @@ header nav li {
 }
 header nav li a,
 header nav li a:visited {
+    color: #fffffb; /* Gofun */
+    background: #0c0c0c; /* Ro */
+}
+header nav li a {
     display: table-cell;
     position: relative;
     width: 100px;
@@ -125,6 +129,8 @@ header nav li a:visited {
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
+}
+header nav li a:visited {
     color: #fffffb; /* Gofun */
     background: #0c0c0c; /* Ro */
 }

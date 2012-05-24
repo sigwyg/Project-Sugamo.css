@@ -53,12 +53,16 @@
     #contents {
         clear: left;
         float: none;
-        width: 320px;
+        width: 300px;
         margin-left: 0;
-        padding: 0px;
+        padding: 0 10px;
     }
     #contents article {
         width: 320px;
+    }
+    #atnd1 dd,
+    #atnd2 dd {
+        width: 180px;
     }
     
     footer {

@@ -51,13 +51,14 @@
     }
     
     #contents {
+        clear: left;
         float: none;
+        width: 320px;
         margin-left: 0;
         padding: 0px;
     }
-    #contents article:target {
+    #contents article {
         width: 320px;
-        
     }
     
     footer {

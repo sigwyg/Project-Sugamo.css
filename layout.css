@@ -35,7 +35,7 @@ body {
 #wrapper {
     width: 846px;
     text-align: left;
-    margin: 0em auto;
+    margin: 0 auto;
 }
 #wrapper:after,
 #contents:after {
@@ -252,19 +252,13 @@ aside:before {
 }
 
 #contents article {
-    width: 0;
-    height: 0;
-    overflow: hidden;
+    width: 646px;
+    padding: 1px;
     
     -webkit-transition: all .6s ease;
     -moz-transition: all .6s ease;
     -o-transition: all .6s ease;
     transition: all .6s ease;
-}
-#contents article:target,
-#contents article.entry {
-    width: 646px;
-    height: auto;
 }
 
 #contents article article h1 {
@@ -285,8 +279,7 @@ aside:before {
 }
 #atnd1 dt,
 #atnd2 dt {
-    float: left;
-    clear: left;
+    display: inline-block;
     padding-right: 1em;
     border-bottom: 1px solid #999;
     
@@ -294,6 +287,8 @@ aside:before {
 }
 #atnd1 dd,
 #atnd2 dd {
+    display: inline-block;
+    width: 520px;
     border-bottom: 1px solid #999;
 }
 

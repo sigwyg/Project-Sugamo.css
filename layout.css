@@ -260,6 +260,7 @@ aside:before {
 #contents article {
     width: 646px;
     padding: 1px;
+    overflow: hidden;
 }
 
 #contents article article h1 {

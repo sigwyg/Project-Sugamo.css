@@ -1,13 +1,10 @@
 ---
 import Layout from '/src/layouts/Layout.astro';
-import Util from '/src/config/Util';
-import { app, args, assets, img, route } from '/src/config/view';
+import Link from '/src/components/Link.astro';
+import Section from '/src/components/Section.astro';
+import { pages, route } from '/src/config/view';
 const pageArgs = {};
 ---
 
-<Layout args={pageArgs}>
-  <div class="content-inner">
-    <h1>Welcome to Astro Site</h1>
-    <p class="sample-link"><a href={ route('/subpage') }>Subpage</a></p>
-  </div>
+<Layout args={ pageArgs }>
 </Layout>

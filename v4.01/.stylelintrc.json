@@ -2,9 +2,11 @@
     "extends": "stylelint-config-standard",
     "rules": {
         "alpha-value-notation": null,
+        "at-rule-empty-line-before": null,
         "custom-property-pattern": null,
         "declaration-block-no-redundant-longhand-properties": null,
         "no-descending-specificity": null,
+        "no-duplicate-selectors": null,
         "no-empty-source": null,
         "property-no-vendor-prefix": null,
         "selector-class-pattern": null,

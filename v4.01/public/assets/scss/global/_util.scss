@@ -1,0 +1,18 @@
+@use "sass:string";
+
+@function rgb($r, $g, $b, $a) {
+  @return string.unquote("rgb(#{$r} #{$g} #{$b} / #{$a})");
+}
+
+@function ltrim($str, $char: ' ') {
+   @if (str-slice($str, 1, 1) == $char) {
+     @return ltrim(str-slice($str, 2), $char);
+   }
+   @else {
+     @return $str;
+   }
+}
+
+@function img($path) {
+  @return "../img/" + ltrim($path, "/");
+}

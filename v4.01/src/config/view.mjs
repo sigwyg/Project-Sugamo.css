@@ -10,6 +10,11 @@ export const args = {
 
 export const pages = [
   { route: '/', label: 'About' },
+  { route: '/place', label: '会場の説明' },
+  { route: '/history', label: '開催履歴' },
+  { route: '/member', label: '過去の参加者' },
+  { route: '/community', label: 'コミュニティ' },
+  { route: '/contact', label: '連絡先' },
 ];
 
 export const app = {

@@ -383,4 +383,61 @@ small {
   .mod-image {
     text-align: center;
   }
+
+  .mod-table {
+    overflow: auto;
+
+    table {
+      width: fit-content;
+      margin-inline: auto;
+      border-collapse: separate;
+      border-width: 1px 0 0 1px;
+      border-style: solid;
+      border-color: #999;
+      overflow-wrap: break-word;
+
+      &.center td {
+        text-align: center;
+      }
+      :is(th, td) {
+        padding: 4px 8px;
+        border-width: 0 1px 1px 0;
+        border-style: solid;
+        border-color: #999;
+      }
+      thead th {
+        background: #ddd;
+      }
+      th {
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .history-table {
+    font-size: 1.4rem;
+
+    :is(.nth, .date, .photo) {
+      text-align: center;
+      white-space: nowrap;
+    }
+    .links {
+      min-width: 24em;
+
+      ul {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .member-list {
+    margin-left: 0;
+    columns: auto 160px;
+
+    > li {
+      margin-left: 36px;
+      font-size: 1.4rem;
+    }
+  }
 }

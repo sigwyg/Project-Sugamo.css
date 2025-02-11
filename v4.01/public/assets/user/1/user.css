@@ -367,3 +367,52 @@ small {
 #page-main .mod-image {
   text-align: center;
 }
+#page-main .mod-table {
+  overflow: auto;
+}
+#page-main .mod-table table {
+  width: fit-content;
+  margin-inline: auto;
+  border-collapse: separate;
+  border-width: 1px 0 0 1px;
+  border-style: solid;
+  border-color: #999;
+  overflow-wrap: break-word;
+}
+#page-main .mod-table table.center td {
+  text-align: center;
+}
+#page-main .mod-table table :is(th, td) {
+  padding: 4px 8px;
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+  border-color: #999;
+}
+#page-main .mod-table table thead th {
+  background: #ddd;
+}
+#page-main .mod-table table th {
+  text-align: center;
+  font-weight: bold;
+}
+#page-main .history-table {
+  font-size: 1.4rem;
+}
+#page-main .history-table :is(.nth, .date, .photo) {
+  text-align: center;
+  white-space: nowrap;
+}
+#page-main .history-table .links {
+  min-width: 24em;
+}
+#page-main .history-table .links ul {
+  margin-left: 20px;
+}
+#page-main .member-list {
+  margin-left: 0;
+  columns: auto 160px;
+}
+#page-main .member-list > li {
+  margin-left: 36px;
+  font-size: 1.4rem;
+}

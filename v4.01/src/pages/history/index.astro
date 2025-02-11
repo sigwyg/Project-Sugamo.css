@@ -1,0 +1,154 @@
+---
+import Layout from '/src/layouts/Layout.astro';
+import Link from '/src/components/Link.astro';
+import Section from '/src/components/Section.astro';
+import Util from '/src/config/Util';
+import { img } from '/src/config/view';
+const pageArgs = {
+  title: '開催履歴',
+};
+
+const link = (url, label = null) => {
+  label ??= url;
+  return { url, label };
+};
+const makeItem = (nth, date, linkList, hasImage) => {
+  return { nth, date, linkList, hasImage };
+};
+const eventHistory = [
+  makeItem(1, '2009-02-14', [
+    link('https://mixi.jp/list_bbs.pl?id=4019902&type=event', 'Sugamo.css イベント - mixi.jp'),
+    link('http://archiva.jp/web/sugamo_css/sugamo_css.html', 'Sugamo.cssってのをやってます - Archiva'),
+  ]),
+  makeItem(2, '2009-03-14', []),
+  makeItem(3, '2009-04-18', [
+    link('https://sakaki0214.hatenablog.jp/entry/20090419/1240121681', '第三回sugamo.cssに参加してきた - これからゆっくり考L'),
+  ]),
+  makeItem(4, '2009-05-16', [
+    link('http://archiva.jp/web/sugamo_css/sugamo_css_04.html', '第４回 Sugamo.css - Archiva'),
+    link('https://neotag.hatenadiary.org/entry/20090516/1242482634', '第4回 sugamo.css (2009-05-16) のまとめ - neotagの雑文'),
+    link('https://sakaki0214.hatenablog.jp/entry/20090517/1242496921', '第4回sugamo.cssに参加してきました - これからゆっくり考L'),
+    link('https://songmu.jp/riji/archives/2009/05/sugamocss.html', 'sugamo.cssに行ってきた - おそらくはそれさえも平凡な日々'),
+  ]),
+  makeItem(5, '2009-06-20', [
+    link('http://archiva.jp/web/sugamo_css/sugamo_css_05.html', '第５回 Sugamo.cssまとめ - Archiva'),
+    link('http://d.hatena.ne.jp/neotag/20090620/1245514682', 'Sugamo.css 第五回 - neotagの雑文'),
+    link('https://sakaki0214.hatenablog.jp/entry/20090621/1245530811', '第伍回 Sugamo.cssレポ - これからゆっくり考L'),
+    link('https://likealunatic.jp/2009/06/21_sugamocss5', 'Sugamo.css第5回に参加したメモ - Like@Lunatic'),
+    link('https://www.songmu.jp/riji/archives/2009/06/sugamocss5.html', 'Sugamo.CSS#5 - おそらくはそれさえも平凡な日々'),
+  ], true),
+  makeItem(6, '2009-07-18', [
+    link('http://archiva.jp/web/sugamo_css/sugamo_css_06.html', '第６回 Sugamo.cssまとめ - Archiva'),
+    link('https://sakaki0214.hatenablog.jp/entry/20090721/1248107915', '第陸回 Sugamo.css - これからゆっくり考L'),
+  ], true),
+  makeItem(7, '2009-08-08', [
+    link('http://archiva.jp/web/sugamo_css/sugamo_css_07.html', '第７回 Sugamo.cssまとめ - Archiva'),
+  ]),
+  makeItem(8, '2009-09-05', [
+    link('http://archiva.jp/web/sugamo_css/sugamo_css_08.html', '第８回 Sugamo.cssまとめ - Archiva'),
+  ], true),
+  makeItem(9, '2009-10-03', [
+    link('https://maboroshi.biz/clearskysource/?p=141', '「第9回 Sugamo.css」と、Dreamweaver CS3 CodeHints.xml拡張 - Clear Sky Source'),
+  ]),
+  makeItem(10, '2009-11-07', [
+    link('http://archiva.jp/web/sugamo_css/sugamo_css_10.html', '第10回 Sugamo.cssまとめ - Archiva'),
+  ], true),
+  makeItem(11, '2009-12-05', [], true),
+  makeItem(12, '2010-01-16', []),
+  makeItem(13, '2010-02-13', [], true),
+  makeItem(14, '2010-03-13', [], true),
+  makeItem(15, '2010-04-03', []),
+  makeItem(16, '2010-05-08', []),
+  makeItem(17, '2010-06-12', [], true),
+  makeItem(18, '2010-07-03', [], true),
+  makeItem(19, '2010-08-07', [], true),
+  makeItem(20, '2010-09-04', [], true),
+  makeItem(21, '2010-10-02', [
+    link('https://stocker.jp/diary/sugamo_css_201010/', 'Sugamo.cssがあまりにも有益だったので、忘れないようまとめておく - Stocker.jp'),
+  ], true),
+  makeItem(22, '2010-11-06', []),
+  makeItem(23, '2010-12-04', [
+    link('http://h2ham.seesaa.net/article/172320476.html', '東京にいるなら参加しておくべき勉強会！Sugamo.cssに初参加 - THE HAM MEDIA BLOG'),
+  ], true),
+  makeItem(24, '2011-01-08', [], true),
+  makeItem(25, '2011-02-12', [], true),
+  makeItem(26, '2011-03-05', [], true),
+  makeItem(27, '2011-04-02', [], true),
+  makeItem(28, '2011-05-07', [
+    link('http://togetter.com/li/133037', '第28回 Sugamo.css まとめ - Togetter'),
+  ], true),
+  makeItem(29, '2011-06-04', [
+    link('http://togetter.com/li/144922', '第29回 Sugamo.css まとめ - Togetter'),
+    link('http://archiva.jp/web/tool/vim_grep2.html', 'Vim: 複数ファイル検索/置換をもうちょい詳しく - Archiva'),
+  ], true),
+  makeItem(30, '2011-07-02', [
+    link('http://togetter.com/li/158487', '第30回 Sugamo.css まとめ - Togetter'),
+  ], true),
+  makeItem(31, '2011-08-06', [
+    link('http://togetter.com/li/172774', '第31回 Sugamo.css まとめ - Togetter'),
+  ], true),
+  makeItem(32, '2011-09-03', [
+    link('http://togetter.com/li/183378', '第32回 Sugamo.css まとめ - Togetter'),
+  ], true),
+  makeItem(33, '2011-10-01', [
+    link('http://togetter.com/li/195959', '第33回 Sugamo.css まとめ - Togetter'),
+  ], true),
+  makeItem(34, '2011-11-05', [
+    link('http://togetter.com/li/210986', '第34回 Sugamo.css まとめ - Togetter'),
+  ], true),
+  makeItem(35, '2011-12-03', [], true),
+  makeItem(36, '2012-02-04', []),
+  makeItem(37, '2012-03-03', []),
+  makeItem(38, '2012-05-05', []),
+  makeItem(39, '2012-06-09', [
+    link('http://togetter.com/li/318967', '第39回 Sugamo.css まとめ - Togetter'),
+  ]),
+  makeItem(40, '2012-07-07', []),
+  makeItem(41, '2013-04-07', []),
+  makeItem(42, '2019-06-23', []),
+  makeItem(43, '2025-03-01', [
+    link('https://connpass.com/event/345705/', '第43回 Sugamo.css - connpass'),
+  ]),
+];
+---
+
+<Layout args={ pageArgs }>
+  <Section heading="Sugamo.css 開催履歴" id="about-place" lv="2">
+    <Fragment slot="section-child">
+      <div class="mod-table">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th class="nth">回数</th>
+              <th class="date">日付</th>
+              <th class="links">関連記事</th>
+              <th class="photo">写真</th>
+            </tr>
+          </thead>
+          <tbody>
+            { Util.Array.sort(eventHistory, true, 'nth').map((record) => (
+              <tr>
+                <td class="nth">{ `第${record.nth}回` }</td>
+                <td class="date">{ Util.Date.format(record.date, 'Y年n月j日(w)') }</td>
+                <td class="links">
+                  { record.linkList.length > 0 && (
+                    <ul>
+                      { record.linkList.map(link => (
+                        <li><Link url={ link.url } label={ link.label } /></li>
+                      ))}
+                    </ul>
+                  )}
+                </td>
+                <td class="photo">
+                  { record.hasImage && (
+                    <Link url={ img(`history/${record.nth}.jpg`) } label={ `第${record.nth}回 座席表` } blank />
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </Fragment>
+  </Section>
+</Layout>

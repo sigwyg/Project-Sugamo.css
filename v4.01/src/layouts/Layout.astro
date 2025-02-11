@@ -1,4 +1,7 @@
 ---
+import Header from '/src/layouts/Header.astro';
+import Footer from '/src/layouts/Footer.astro';
+import Article from '/src/components/Article.astro';
 import Util from '/src/config/Util';
 import { app, args, assets, img, route } from '/src/config/view';
 app.init(Astro);
@@ -10,6 +13,7 @@ app.init(Astro);
     <meta charset="UTF-8" />
     <title>{ args.title }</title>
     <meta name="description" content={ args.description }>
+    <meta name="keywords" content={ args.keywords.join(', ') }>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <meta name="format-detection" content="telephone=no, email=no, address=no" />
@@ -33,26 +37,16 @@ app.init(Astro);
     <script src={ assets('js/global/base.js', true) }></script>{
       (args.cssList.length > 0 || args.jsList.length > 0) && '\n'
     }{
-      args.cssList.map(css => <Fragment set:html={Util.sprintf('\n<link rel="stylesheet" href="%s">', assets('css/' + Util.ltrim(css), true))} />)
+      args.cssList.map((css) => <Fragment set:html={ Util.sprintf('\n<link rel="stylesheet" href="%s">', assets('css/' + Util.ltrim(css), true)) } />)
     }{
-      args.jsList.map(js => <Fragment set:html={Util.sprintf('\n<script src="%s"></script>', assets('js/' + Util.ltrim(js), true))} />)
+      args.jsList.map((js) => <Fragment set:html={ Util.sprintf('\n<script src="%s"></script>', assets('js/' + Util.ltrim(js), true)) } />)
     }
   </head>
   <body>
     <div id="page-container">
-      <header id="page-header">
-        <div class="content-inner">
-          <h1 class="siteName"><a href={ route('/') }><img src={ img('global/logo.png') } alt="Astro Site" width="100" height="100"></a></h1>
-        </div>
-      </header>
+      <header id="page-header"><Header /></header>
       <main id="page-main"><slot /></main>
-      <footer id="page-footer">
-        <div class="content-inner">
-          <div class="footerArea">
-            <p class="copyright"><span class="wbr">Copyright 2025</span> <img src={ img('global/logo.png') } alt="Astro Site" width="30" height="30"> <span class="wbr">Powered by Astro</span></p>
-          </div>
-        </div>
-      </footer>
+      <footer id="page-footer"><Footer /></footer>
     </div>
   </body>
 </html>

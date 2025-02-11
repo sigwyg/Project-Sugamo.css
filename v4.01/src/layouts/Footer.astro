@@ -1,0 +1,14 @@
+---
+import Link from '/src/components/Link.astro';
+import { img, route } from '/src/config/view';
+---
+
+<div class="content-inner">
+  <div class="page-footer__content-area">
+    <p class="page-footer__copyright">
+      <span class="wbr">Copyright 2025</span>
+      <Link url={ route('/') }><img src={ img('global/logo.png') } alt="Sugamo.css" width="86" height="48"></Link>
+      <span class="wbr">Hosted on <Link url="https://github.com/sigwyg/Project-Sugamo.css" label="GitHub Pages" /></span>
+    </p>
+  </div>
+</div>

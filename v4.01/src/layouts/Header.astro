@@ -1,0 +1,18 @@
+---
+import Link from '/src/components/Link.astro';
+import { args, pages, img, route } from '/src/config/view';
+---
+
+<div class="content-inner">
+  <h1 class="page-header__site-name"><Link url={ route('/') }><img src={ img('global/logo.png') } alt="Sugamo.css" width="172" height="96"></Link></h1>
+  <div class="page-header__global-nav-area">
+    <p class="hatena-bookmark">
+      <a href={ `https://b.hatena.ne.jp/entry/s/${args.siteRootUrlWithoutProtocol}` } class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-normal" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script src="https://b.st-hatena.com/js/bookmark_button.js" async="async"></script>
+    </p>
+    <ul class="page-header__global-nav">
+      { pages.map((page) => (
+        <li><Link url={ route(page.route) } label={ page.label } /></li>
+      ))}
+    </ul>
+  </div>
+</div>

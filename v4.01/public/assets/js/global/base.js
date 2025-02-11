@@ -11,6 +11,9 @@
     userInit(obj) {
       NS.user = obj;
 
+      if (NS.user.noLoadCSS) {
+        Sub.dom.show();
+      }
       if (NS.user.resetCSS === false) {
         Sub.removeResetCSS();
       }
@@ -30,7 +33,6 @@
           link.onerror = () => {
             reject();
           };
-          setTimeout(() => Sub.dom.show(), 1000);
           Sub.dom.load(link);
         }));
       }
@@ -46,6 +48,9 @@
     loadUserScript() {
       const id = Sub.getUserScriptId();
       Sub.loadUserScript(id);
+    },
+    afterLoadCSS() {
+      setTimeout(() => Sub.dom.show(), 1000);
     },
   };
 

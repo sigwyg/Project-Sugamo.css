@@ -44,7 +44,9 @@ app.init(Astro);
   <body>
     <div id="page-container">
       <header id="page-header"><Header /></header>
-      <main id="page-main"><slot /></main>
+      <main id="page-main">
+        <div class="content-inner"><slot /></div>
+      </main>
       <footer id="page-footer"><Footer /></footer>
     </div>
   </body>

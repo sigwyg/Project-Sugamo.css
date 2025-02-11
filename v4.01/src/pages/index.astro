@@ -2,9 +2,40 @@
 import Layout from '/src/layouts/Layout.astro';
 import Link from '/src/components/Link.astro';
 import Section from '/src/components/Section.astro';
-import { pages, route } from '/src/config/view';
+import { img } from '/src/config/view';
 const pageArgs = {};
 ---
 
 <Layout args={ pageArgs }>
+  <Section heading="Sugamo.css とは？" id="what-is-sugamo-css" lv="2">
+    <Fragment slot="section-child">
+      <div class="mod-image">
+        <p><img src={ img('global/kamo.png') } alt="Sugamo の鴨という漢字" width="260" height="260"></p>
+      </div>
+      <p><strong>フロントエンドの話をしよう！</strong>…な集まりです。より正確には、</p>
+      <ul>
+        <li>専業コーダー（ME）は社内に少ない</li>
+        <li>コーディング周りのディープな話をする場がない（発足時）</li>
+        <li>コーダーを集めたら話題はいくらでもあるんじゃね？</li>
+      </ul>
+      <p>…てな感じで始まりました。</p>
+      <p>基本は雑談です。最近は発表ネタ持ってきてくれる人も増えたけど、普通に仕事してる人もいます。「みんなどうやってる？」質問リスト等を持ってくると、たいへん喜ばれます。</p>
+      <figure>
+        <div class="figure-item">
+          <blockquote>
+            <p>まじで今日はSugamo.cssぐだぐだだったけど別に次何するとか決めないし約束しないし気が向いたらなんかするそれがSugamo.css</p>
+          </blockquote>
+        </div>
+        <figcaption>
+          <Link url="https://x.com/Takazudo/status/36458421196685312" label="―― @Takazudo のコメント" />
+        </figcaption>
+      </figure>
+    </Fragment>
+  </Section>
+  <Section heading="開催時期" id="date-of-event" lv="2">
+    <Fragment slot="section-child">
+      <p>毎月開催。第一土曜の 14:00 〜 18:00。</p>
+      <p>ただし、連休や CSS Nite と被るとズレることがあります。</p>
+    </Fragment>
+  </Section>
 </Layout>

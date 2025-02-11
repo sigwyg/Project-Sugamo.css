@@ -19,6 +19,7 @@
 body {
   line-height: 1.3;
   overflow-wrap: anywhere;
+  background: var(--primary-white-80-color);
 }
 
 table {
@@ -347,7 +348,7 @@ small {
 
 #page-footer {
   border-top: 1px solid var(--primary-white-50-color);
-  background: var(--primary-white-90-color);
+  background: var(--primary-white-70-color);
 }
 #page-footer .page-footer__content-area {
   padding: 4px 8px 8px;
@@ -361,4 +362,8 @@ small {
 #page-footer .page-footer__copyright img {
   margin-top: -4px;
   vertical-align: middle;
+}
+
+#page-main .mod-image {
+  text-align: center;
 }

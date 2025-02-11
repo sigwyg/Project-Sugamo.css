@@ -2,6 +2,7 @@
   'use strict';
 
   NS.userInit({
+    title: 'debiru.net',
     author: 'debiru',
   });
 

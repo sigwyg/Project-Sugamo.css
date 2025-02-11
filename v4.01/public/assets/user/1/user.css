@@ -32,6 +32,30 @@ a:hover {
   color: var(--link-light-color);
 }
 
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+img.border {
+  outline: 1px solid #ccc;
+}
+
+strong {
+  color: #900;
+  font-style: normal;
+  font-weight: bold;
+}
+
+em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+small {
+  font-size: 92%;
+}
+
 .content-inner {
   max-width: var(--content-inner);
   margin-inline: auto;
@@ -157,6 +181,168 @@ a:hover {
 #page-header .page-header__global-nav ul > li a:hover {
   background: #666;
   color: var(--primary-color);
+}
+
+#page-main {
+  padding-bottom: 160px;
+}
+#page-main h1, #page-main h2, #page-main h3, #page-main h4, #page-main h5, #page-main h6 {
+  font-weight: bold;
+  font-family: var(--font-serif);
+}
+#page-main h2, #page-main h3, #page-main h4, #page-main h5, #page-main h6 {
+  display: flex;
+  flex-wrap: wrap;
+}
+#page-main :is(h2, h3, h4, h5, h6) a {
+  padding-bottom: 4px;
+  border-bottom: 2px dotted #333;
+  color: inherit;
+  text-decoration: none;
+}
+#page-main h1 {
+  font-size: 3.2rem;
+  text-align: center;
+}
+#page-main h2 {
+  font-size: 3.2rem;
+}
+#page-main h3 {
+  font-size: 2.4rem;
+}
+#page-main h4 {
+  font-size: 1.8rem;
+}
+#page-main h5 {
+  font-size: 1.6rem;
+}
+#page-main h6 {
+  font-size: 1.6rem;
+}
+#page-main {
+  counter-reset: num2 num3 num4 num5 num6;
+}
+#page-main h2 {
+  counter-increment: num2;
+  counter-set: num3 num4 num5 num6;
+}
+#page-main h3 {
+  counter-increment: num3;
+  counter-set: num4 num5 num6;
+}
+#page-main h4 {
+  counter-increment: num4;
+  counter-set: num5 num6;
+}
+#page-main h5 {
+  counter-increment: num5;
+  counter-set: num6;
+}
+#page-main h6 {
+  counter-increment: num6;
+}
+#page-main :is(h2, h3, h4, h5, h6)::after {
+  display: inline-block;
+  margin-top: 8px;
+  margin-left: 8px;
+  color: #666;
+  vertical-align: super;
+  font-weight: normal;
+  font-family: var(--font-verdana);
+}
+#page-main h2::after {
+  font-size: 1.4rem;
+}
+#page-main h3::after {
+  font-size: 1.2rem;
+}
+#page-main h4::after {
+  font-size: 1.2rem;
+}
+#page-main h5::after {
+  font-size: 1.2rem;
+}
+#page-main h6::after {
+  font-size: 1.2rem;
+}
+#page-main h2::after {
+  content: "#" counter(num2);
+}
+#page-main h3::after {
+  content: "#" counter(num2) "-" counter(num3);
+}
+#page-main h4::after {
+  content: "#" counter(num2) "-" counter(num3) "-" counter(num4);
+}
+#page-main h5::after {
+  content: "#" counter(num2) "-" counter(num3) "-" counter(num4) "-" counter(num5);
+}
+#page-main h6::after {
+  content: "#" counter(num2) "-" counter(num3) "-" counter(num4) "-" counter(num5) "-" counter(num6);
+}
+#page-main blockquote {
+  margin-left: 20px;
+  border-left: 4px solid #ccc;
+  padding: 10px 20px;
+}
+#page-main blockquote > *:not(:first-child) {
+  margin-top: 20px;
+}
+#page-main code {
+  padding: 2px 4px;
+  background: #ddd;
+  font-family: var(--font-monospace);
+}
+#page-main dl .di:not(:first-child) {
+  margin-top: 10px;
+}
+#page-main dl dt {
+  font-weight: bold;
+}
+#page-main dl dd {
+  margin-left: 20px;
+}
+#page-main figure figcaption {
+  text-align: center;
+  font-size: 1.4rem;
+}
+#page-main figure figcaption:first-child {
+  margin-bottom: 10px;
+}
+#page-main figure figcaption:last-child {
+  margin-top: 10px;
+}
+#page-main figure figcaption > *:not(:first-child) {
+  margin-top: 10px;
+}
+#page-main figure .figure-item {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+}
+#page-main ul, #page-main ol {
+  list-style: revert;
+  margin-left: 36px;
+}
+#page-main .section.lv-1 > .section__header {
+  margin-top: 30px;
+}
+#page-main .section.lv-1 > .section__body {
+  margin-top: 10px;
+}
+#page-main .section.lv-2 .section__header {
+  margin-top: 40px;
+}
+#page-main .section.lv-2 .section__body {
+  margin-top: 30px;
+}
+#page-main .section.lv-2 .section__body .section__child > * {
+  margin-top: 20px;
+  line-height: 1.8;
+}
+#page-main .section .section__body .section__child.last {
+  margin-top: 60px;
+  border-top: 3px dotted var(--primary-white50-color);
 }
 
 #page-footer {

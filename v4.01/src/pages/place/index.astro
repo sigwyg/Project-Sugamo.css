@@ -1,0 +1,25 @@
+---
+import Layout from '/src/layouts/Layout.astro';
+import Link from '/src/components/Link.astro';
+import Section from '/src/components/Section.astro';
+const pageArgs = {
+  title: '会場の説明',
+};
+---
+
+<Layout args={ pageArgs }>
+  <Section heading="会場について" id="about-place" lv="2">
+    <Fragment slot="section-child">
+      <p>都内各所の銀座ルノアール貸し会議室（マイスペース）でやっています。どこぞの会社の会議室を借りるということは基本的にしません。「自分のテリトリーから出てくる」ということが重要なのです。各回の参加者は 20 名前後、参加費は（場所代として）各人 1000 〜 1500円 ほど頂いています。</p>
+      <p>ノート PC があった方がいろいろ楽です。無線環境として、新宿区役所横店では WiMAX は微妙。Emobile はそこそこ。Livedoor Wireless は（基本的に）どの店でも使えます。ただ、Fon および Livedoor Wireless は認証に難がありまして、あらかじめ MAC アドレス認証しておくことを推奨します。</p>
+      <p>当日は 現地集合！ ぐだぐだ話しましょう。</p>
+      <p>あと、補欠とか気にせず来たい人は来ちゃってください。事前の参加表明は人数の目安であって、椅子の確保を意味するモノではありません。人数多いと遅刻したら椅子がないかもねってだけの話なのでね！椅子がなくても座れば良いじゃない。</p>
+      <p>四谷店、新宿区役所横店ではパイプ椅子 x 5 を確認</p>
+    </Fragment>
+  </Section>
+  <Section heading="二次会" id="second-party" lv="2">
+    <Fragment slot="section-child">
+      <p>終了後てきとーに募集します。三次会はダーッ（ｒｙ</p>
+    </Fragment>
+  </Section>
+</Layout>

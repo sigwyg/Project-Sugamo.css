@@ -96,3 +96,17 @@ img, iframe, video {
 button {
   cursor: pointer;
 }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  font-size: 1.6rem;
+}
+
+.wbr {
+  display: inline-block;
+}

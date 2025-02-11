@@ -28,6 +28,60 @@ const Util = {
       }
       return result;
     },
+    sort(array, isDesc = false, prop = null) {
+      const sign = isDesc ? 1 : -1;
+      array.sort((a, b) => {
+        if (prop != null) {
+          a = a[prop];
+          b = b[prop];
+        }
+        if (a < b) return sign;
+        if (a > b) return -sign;
+        return 0;
+      });
+      return array;
+    },
+  },
+  Object: {
+    each(obj, callback) {
+      for (const [key, value] of Object.entries(obj)) {
+        if (callback.call(obj, key, value) === false) break;
+      }
+    },
+    map(obj, callback) {
+      const ret = {};
+      Util.Object.each(obj, (key, value) => ret[key] = callback(value, key));
+      return ret;
+    },
+  },
+  Date: {
+    methodMap: { year: 'getFullYear', month: 'getMonth', day: 'getDate', hour: 'getHours', minute: 'getMinutes', second: 'getSeconds', weekday: 'getDay' },
+    weekdays: ['日', '月', '火', '水', '木', '金', '土'],
+    dateObjToMap(dateObj) {
+      const map = Util.Object.map(Util.Date.methodMap, (method) => dateObj[method]());
+      ++map.month;
+      map.weekday = Util.Date.weekdays[map.weekday];
+      return map;
+    },
+    zeroPaddingMap(map) {
+      return Util.Object.map(map, (value, key) => key === 'weekday' ? value : String(value).padStart(key === 'year' ? 4 : 2, '0'));
+    },
+    format(dateStr, format = 'Y-m-d H:i:s') {
+      if (/^\d+-\d+-\d+$/.test(dateStr)) dateStr += ' 00:00:00';
+      const map = Util.Date.zeroPaddingMap(Util.Date.dateObjToMap(new Date(dateStr)));
+      const charMap = {
+        Y: map.year,
+        m: map.month,
+        n: String(Number(map.month)),
+        d: map.day,
+        j: String(Number(map.day)),
+        H: map.hour,
+        i: map.minute,
+        s: map.second,
+        w: map.weekday,
+      };
+      return format.replace(/[YmndjHGisw]/g, (m) => charMap[m]);
+    },
   },
   sprintf(format, ...args) {
     let p = 0;

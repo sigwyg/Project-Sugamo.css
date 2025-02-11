@@ -10,6 +10,10 @@
     },
     userInit(obj) {
       NS.user = obj;
+
+      if (NS.user.resetCSS === false) {
+        Sub.removeResetCSS();
+      }
     },
     loadCSS(urlList) {
       if (!Array.isArray(urlList)) urlList = [urlList];
@@ -111,6 +115,10 @@
       const isAbs = /^https:\/\//.test(url);
       if (!isAbs) url = Sub.getUserPath(url);
       return url;
+    },
+    removeResetCSS() {
+      const link = document.getElementById('resetCSS');
+      link.remove();
     },
   };
 

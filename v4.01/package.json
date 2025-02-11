@@ -4,7 +4,9 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "build/build.sh && astro build",
+    "watch": "build/watch.sh",
+    "stylelint": "build/stylelint.sh",
     "preview": "astro preview",
     "astro": "astro"
   },

@@ -1,0 +1,14 @@
+[
+  {
+    "title": "No CSS",
+    "author": "debiru",
+    "noLoadCSS": true,
+    "resetCSS": false,
+    "id": 0
+  },
+  {
+    "title": "debiru.net",
+    "author": "debiru",
+    "id": 1
+  }
+]

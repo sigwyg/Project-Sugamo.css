@@ -1,0 +1,48 @@
+---
+import Layout from '/src/layouts/Layout.astro';
+import Link from '/src/components/Link.astro';
+import Section from '/src/components/Section.astro';
+import { args } from '/src/config/view';
+import userInfo from '/src/config/userInfo.json';
+const pageArgs = {
+  title: 'コミュニティ',
+};
+---
+
+<Layout args={ pageArgs }>
+  <Section heading="Sugamo.css Discord サーバー" id="discord" lv="2">
+    <Fragment slot="section-child">
+      <p>2025年2月11日に、Sugamo.css Discord サーバーを開設しました。参加はこちらからどうぞ。<Link url="https://discord.gg/QfyePrgB4r" /></p>
+      <p>今後は Sugamo.css の<strong>オンライン開催</strong>をちょくちょくやろうかと思っています。オフライン開催もたまにできたらいいですね。</p>
+    </Fragment>
+  </Section>
+  <Section heading="Sugamo.css Zen Garden" id="discord" lv="2">
+    <Fragment slot="section-child">
+      <p>CSS Zen Garden をご存知でしょうか。<Link url="https://csszengarden.com/" /></p>
+      <p>CSS Zen Garden は2003年に開設された、同一の HTML に対して CSS を差し替えることで Web サイトの表現力がどれだけの可能性を秘めているかを発見するための実験的なサイトです。GitHub でソースコードが管理されており、ユーザーは新規の CSS ファイルセットを自由に作成することができます。<Link url="https://csszengarden.com/221/" /> このような URL にアクセスすると、異なるデザインの CSS Zen Garden を見ることができます。</p>
+      <p>この Sugamo.css にも CSS Zen Garden と同じような仕組みを導入し、サイトのデザインを変えられるようにしました。<Link url="https://github.com/sigwyg/Project-Sugamo.css" /> から <code>v4.01/public/assets/user/0</code> をコピーして、新しい番号のディレクトリを作成してください。<code>user.js</code> がエントリポイントです。</p>
+      <div class="mod-table">
+        <table class="user-info-table">
+          <thead>
+            <tr>
+              <th class="id">ID</th>
+              <th class="title">Title</th>
+              <th class="author">Author</th>
+              <th class="url">URL</th>
+            </tr>
+          </thead>
+          <tbody>
+            { userInfo.map((user) => (
+              <tr>
+                <td class="id">{ user.id }</td>
+                <td class="title">{ user.title }</td>
+                <td class="author">{ user.author }</td>
+                <td class="url"><Link url={ `${args.siteRootUrl}/?id=${user.id}` } /></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </Fragment>
+  </Section>
+</Layout>

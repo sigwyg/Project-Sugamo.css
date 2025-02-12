@@ -204,6 +204,7 @@ small {
 }
 #page-header .page-header__user-css-area form ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 

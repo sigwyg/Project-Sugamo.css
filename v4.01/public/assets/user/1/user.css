@@ -38,6 +38,16 @@ img {
   max-width: 100%;
 }
 
+button, select {
+  padding: 3px 6px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background: #eee;
+  color: inherit;
+  font-weight: normal;
+  font-size: 1.3rem;
+}
+
 img.border {
   outline: 1px solid #ccc;
 }
@@ -71,7 +81,7 @@ small {
   min-height: 100dvh;
 }
 
-#page-header .content-inner {
+#page-header .page-header__first-group {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -182,6 +192,19 @@ small {
 #page-header .page-header__global-nav ul > li a:hover {
   background: #666;
   color: var(--primary-color);
+}
+#page-header .page-header__second-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 30px;
+}
+#page-header .page-header__user-css-area {
+  padding: 10px;
+}
+#page-header .page-header__user-css-area form ul {
+  display: flex;
+  gap: 10px;
 }
 
 #page-main {
@@ -415,4 +438,7 @@ small {
 #page-main .member-list > li {
   margin-left: 36px;
   font-size: 1.4rem;
+}
+#page-main .user-info-table td {
+  text-align: center;
 }

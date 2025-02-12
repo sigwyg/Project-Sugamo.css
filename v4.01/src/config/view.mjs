@@ -25,6 +25,7 @@ export const app = {
     args.domain = app.url.hostname;
     args.path = app.url.pathname.replace(/\.html$/, '');
     args.url = app.url.origin + args.path;
+    args.siteRootUrl = app.url.origin;
     args.siteRootUrlWithoutProtocol = app.url.host;
     args.urlWithoutProtocol = app.url.host + args.path;
     args.cssList = app.args.cssList ?? [];

@@ -1,4 +1,4 @@
-(async function() {
+(function() {
   'use strict';
 
   NS.userInit({

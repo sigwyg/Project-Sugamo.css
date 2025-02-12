@@ -78,7 +78,7 @@
     },
     getNumberQuery(key) {
       const value = Sub.getQuery(key);
-      if (value == null) return null;
+      if (value == null || !/^\d+$/.test(value)) return null;
       return Number(value);
     },
     getLocalStorage(key = null) {

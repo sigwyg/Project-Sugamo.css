@@ -2,11 +2,12 @@
 import Layout from '/src/layouts/Layout.astro';
 import Link from '/src/components/Link.astro';
 import Section from '/src/components/Section.astro';
-import { img } from '/src/config/view';
+import { app, img } from '/src/config/view';
 const pageArgs = {};
+app.init(Astro, pageArgs);
 ---
 
-<Layout args={ pageArgs }>
+<Layout>
   <Section heading="このサイトについて" id="about-this-site" lv="2">
     <Fragment slot="section-child">
       <p><strong>Sugamo.css</strong> は、2009年から2013年頃に定期的に開催されていたフロントエンド勉強会です。</p>

@@ -2,12 +2,14 @@
 import Layout from '/src/layouts/Layout.astro';
 import Link from '/src/components/Link.astro';
 import Section from '/src/components/Section.astro';
+import { app } from '/src/config/view';
 const pageArgs = {
   title: '連絡先',
 };
+app.init(Astro, pageArgs);
 ---
 
-<Layout args={ pageArgs }>
+<Layout>
   <Section heading="連絡先" id="contact" lv="2">
     <Fragment slot="section-child">
       <p>Sugamocss.com は、今のところ主催の Sig. が管理しています。Sugamo.css（イベント）および Sugamocss.com（サイト）へのご意見・ご要望・お問い合わせは @sigwyg まで。</p>

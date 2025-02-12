@@ -3,10 +3,11 @@ import Layout from '/src/layouts/Layout.astro';
 import Link from '/src/components/Link.astro';
 import Section from '/src/components/Section.astro';
 import Util from '/src/config/Util';
-import { img } from '/src/config/view';
+import { app, img } from '/src/config/view';
 const pageArgs = {
   title: '開催履歴',
 };
+app.init(Astro, pageArgs);
 
 const link = (url, label = null) => {
   label ??= url;
@@ -112,7 +113,7 @@ const eventHistory = [
 ];
 ---
 
-<Layout args={ pageArgs }>
+<Layout>
   <Section heading="Sugamo.css 開催履歴" id="about-place" lv="2">
     <Fragment slot="section-child">
       <div class="mod-table">

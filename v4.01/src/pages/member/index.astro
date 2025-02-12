@@ -3,9 +3,11 @@ import Layout from '/src/layouts/Layout.astro';
 import Link from '/src/components/Link.astro';
 import Section from '/src/components/Section.astro';
 import Util from '/src/config/Util';
+import { app } from '/src/config/view';
 const pageArgs = {
   title: '過去の参加者',
 };
+app.init(Astro, pageArgs);
 
 const makeItem = (name, noExist = false) => {
   return { name, noExist };
@@ -147,7 +149,7 @@ const memberList = [
 ];
 ---
 
-<Layout args={ pageArgs }>
+<Layout>
   <Section heading="過去の参加者" id="members" lv="2">
     <Fragment slot="section-child">
       <p>以下、参加者の Twitter ID です。だいたい参加順。</p>

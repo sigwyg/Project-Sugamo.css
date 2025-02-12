@@ -18,9 +18,9 @@ export const pages = [
 ];
 
 export const app = {
-  init(Astro) {
+  init(Astro, pageArgs) {
     app.Astro = Astro;
-    app.args = Astro.props.args ?? {};
+    app.args = pageArgs ?? {};
     app.url = Astro.url;
     args.domain = app.url.hostname;
     args.path = app.url.pathname.replace(/\.html$/, '');

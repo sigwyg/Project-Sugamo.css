@@ -1,47 +1,68 @@
-# Astro Starter Kit: Minimal
+# Sugamo.css by Astro
 
-```sh
-npm create astro@latest -- --template minimal
+- [10分で Astro サイトを GitHub Pages に構築するスターターキットを作ったよ](https://qiita.com/debiru/items/a5ac8219b696045f88f5)
+
+このスターターキットを用いて Astro サイトを構築しました。
+
+## npm scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Live-Reload-Server で Astro サイトを起動します |
+| `npm run build` | Sass と Astro ページのビルドを実行します |
+| `npm run watch` | Sass の Watch-Compile を起動します |
+| `npm run stylelint` | CSS ファイルを対象に Stylelint を実行します |
+| `npm run preview` | `dist` ディレクトリを基に Static-Server で Astro サイトを起動します |
+| `npm run astro` | `astro` コマンドを実行します |
+
+## サイト開発の進め方
+
+### 初期設定
+
+```
+# 作業ディレクトリへ移動する
+cd /path/to
+
+# リポジトリを clone する
+git clone git@github.com:sigwyg/Project-Sugamo.css.git
+
+# リポジトリディレクトリへ移動する
+cd Project-Sugamo.css
+
+# Astro ルートディレクトリへ移動する
+cd v4.01
+
+# npm install を実行する
+npm install
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+### サイトをプレビュー表示する
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+# Web サーバーを起動する
+npm run dev
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- [http://localhost:4321/](http://localhost:4321/) へアクセスする
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### CSS を編集する
 
-Any static assets, like images, can be placed in the `public/` directory.
+```
+# Sass の Watch-Compile を起動する
+npm run watch
 
-## 🧞 Commands
+# scss ファイルを編集する
+emacs public/assets/user/1/user.scss
+```
 
-All commands are run from the root of the project, from a terminal:
+- `scss` ファイルを保存したら [http://localhost:4321/](http://localhost:4321/) を表示しているブラウザを手動でリロードする
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### `dist/*` を生成する
 
-## 👀 Want to learn more?
+```
+# ビルドを実行する
+npm run build
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+# ビルド後のファイルをプレビューする
+npm run preview
+```

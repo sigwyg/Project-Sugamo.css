@@ -63,7 +63,7 @@
     DEFAULT_ID: 1,
     dom: {
       hide() {
-        document.documentElement.style.display = 'none';
+        document.documentElement.style.opacity = '0';
       },
       show() {
         document.documentElement.removeAttribute('style');

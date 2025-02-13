@@ -2,4 +2,4 @@
 
 cd $(dirname $0)/..
 
-npx stylelint "public/assets/css/**/*.css"
+npx stylelint "public/assets/**/*.css"

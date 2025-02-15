@@ -423,7 +423,7 @@ small {
 #page-main .history-table {
   font-size: 1.4rem;
 }
-#page-main .history-table :is(.nth, .date, .photo) {
+#page-main .history-table :is(.nth, .date, .place, .photo) {
   text-align: center;
   white-space: nowrap;
 }

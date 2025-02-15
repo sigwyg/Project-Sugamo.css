@@ -447,7 +447,7 @@ small {
   .history-table {
     font-size: 1.4rem;
 
-    :is(.nth, .date, .photo) {
+    :is(.nth, .date, .place, .photo) {
       text-align: center;
       white-space: nowrap;
     }

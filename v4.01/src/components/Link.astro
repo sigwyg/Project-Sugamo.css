@@ -1,0 +1,7 @@
+---
+let { url, label, blank } = Astro.props;
+if (label === undefined) label = url;
+const target = /^\w+:\/\//.test(url) || blank ? '_blank' : undefined;
+---
+
+<a href={ url } target={ target }>{ Astro.slots.has('default') ? <slot /> : label }</a>

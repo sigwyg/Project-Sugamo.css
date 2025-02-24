@@ -1,0 +1,52 @@
+---
+import Header from '/src/layouts/Header.astro';
+import Footer from '/src/layouts/Footer.astro';
+import Article from '/src/components/Article.astro';
+import Util from '/src/config/Util';
+import { args, assets, img, route } from '/src/config/view';
+---
+
+<!DOCTYPE html>
+<html lang={ args.lang } id={ args.path }>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{ args.title }</title>
+    <meta name="description" content={ args.description }>
+    <meta name="keywords" content={ args.keywords.join(', ') }>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <meta name="format-detection" content="telephone=no, email=no, address=no" />
+    <meta name="generator" content={ Astro.generator }>
+
+    <meta property="og:locale" content={ args.locale }>
+    <meta property="og:type" content={ args.og_type }>
+    <meta property="og:site_name" content={ args.siteName }>
+    <meta property="og:title" content={ args.title }>
+    <meta property="og:description" content={ args.description }>
+    <meta property="og:image" content={ args.og_image }>
+    <meta property="og:url" content={ args.url }>
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content={ args.title }>
+    <meta name="twitter:description" content={ args.description }>
+    <meta name="twitter:site" content={ args.twitter }>
+
+    <link id="resetCSS" rel="stylesheet" href={ assets('css/global/base.css', true) }>
+    <script src={ assets('js/global/base.js', true) }></script>{
+      (args.cssList.length > 0 || args.jsList.length > 0) && '\n'
+    }{
+      args.cssList.map((css) => <Fragment set:html={ Util.sprintf('\n<link rel="stylesheet" href="%s">', assets('css/' + Util.ltrim(css), true)) } />)
+    }{
+      args.jsList.map((js) => <Fragment set:html={ Util.sprintf('\n<script src="%s"></script>', assets('js/' + Util.ltrim(js), true)) } />)
+    }
+  </head>
+  <body>
+    <div id="page-container">
+      <header id="page-header"><Header /></header>
+      <main id="page-main">
+        <div class="content-inner"><slot /></div>
+      </main>
+      <footer id="page-footer"><Footer /></footer>
+    </div>
+  </body>
+</html>

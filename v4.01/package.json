@@ -12,5 +12,12 @@
   },
   "dependencies": {
     "astro": "^5.4.0"
+  },
+  "devDependencies": {
+    "glob": "^11.0.1",
+    "js-beautify": "^1.15.3",
+    "sass": "^1.85.1",
+    "stylelint": "^16.14.1",
+    "stylelint-config-standard": "^37.0.0"
   }
 }

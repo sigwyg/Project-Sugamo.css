@@ -1,0 +1,16 @@
+---
+import Layout from '/src/layouts/Layout.astro';
+import Util from '/src/config/Util';
+import { app, args, assets, img, route } from '/src/config/view';
+const pageArgs = {
+  title: 'Subpage Title',
+  cssList: ['subpage/style.css'],
+  jsList: ['subpage/script.js'],
+};
+---
+
+<Layout args={pageArgs}>
+  <div class="content-inner">
+    <h1>Subpage</h1>
+  </div>
+</Layout>

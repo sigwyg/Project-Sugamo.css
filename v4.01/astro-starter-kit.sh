@@ -16,7 +16,7 @@ BASE_URL="https://astro.debiru.net"
 DOMAIN_NAME="$1"
 
 function apply_patch() {
-  curl -fsSL "${BASE_URL}/build/patch/$1" | git apply --allow-empty --quiet
+  curl -fsSL "${BASE_URL}/build/patch/$1" | git apply --directory="v4.01" --allow-empty --quiet
 }
 
 function git_commit_if() {
